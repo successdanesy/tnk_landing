@@ -1,32 +1,29 @@
 import { motion } from "framer-motion";
 
-const cards = [
-  { k: "01", label: "Authority", sub: "The recognised voice in your space" },
-  { k: "02", label: "Visibility", sub: "A presence where your buyers look" },
-  { k: "03", label: "Leads", sub: "Content that turns into conversations" },
-];
-
 export function Hero() {
   return (
     <section
       id="top"
       className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-tnk-charcoal"
     >
-      {/* Background image — clean, no overlay. On phones the crop is biased up-and-right
-          so the dark panelling stays behind the copy and the desk clutter is pushed out. */}
+      {/* Background image — clean on desktop; on phones the crop keeps the two
+          founders framed while the copy gets a soft scrim for legibility. */}
       <img
         src="/photos/hero.png"
         alt="Two founders in conversation across a meeting table"
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover object-[72%_18%] sm:object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[73%_50%] sm:object-center"
       />
+
+      {/* Mobile-only legibility scrim behind the headline (top ~60%) */}
+      <div className="absolute inset-x-0 top-0 h-[62%] bg-gradient-to-b from-tnk-charcoal/85 via-tnk-charcoal/40 to-transparent sm:hidden" />
 
       {/* Content — top-left on phones (over the panelling), centred from sm up */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-10 pt-28 sm:justify-center sm:pb-16 lg:px-16"
+        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-16 pt-28 sm:justify-center lg:px-16"
       >
         <p className="tnk-eyebrow mb-5 font-display text-[10px] font-semibold text-white/80 sm:text-[11px]">
           The presence behind the founder
@@ -61,27 +58,6 @@ export function Hero() {
           </a>
         </div>
       </motion.div>
-
-      {/* Cards — clean light shelf. In normal flow so it can never overlap the copy:
-          pinned to the base of the hero on desktop, stacked below it on phones. */}
-      <div className="relative z-20 px-6 pb-6 pt-8 lg:px-16 lg:pb-8">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 sm:grid-cols-3">
-          {cards.map((c) => (
-            <div
-              key={c.k}
-              className="flex flex-col gap-1 rounded-xl border border-black/5 bg-tnk-paper px-4 py-3 shadow-[0_16px_40px_-18px_rgba(0,0,0,0.45)] sm:gap-1.5 sm:px-5 sm:py-4"
-            >
-              <div className="flex items-center gap-2.5">
-                <span className="font-display text-[11px] font-semibold text-tnk-yellow">{c.k}</span>
-                <span className="font-display text-sm font-semibold tracking-tight text-tnk-ink">
-                  {c.label}
-                </span>
-              </div>
-              <p className="text-xs font-light text-tnk-mute">{c.sub}</p>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

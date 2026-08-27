@@ -1,12 +1,12 @@
 import { Reveal } from "../components/Reveal";
+import { LazyVideo } from "../components/LazyVideo";
 
 export function StoryReveal() {
   return (
     <section className="relative w-full overflow-hidden bg-tnk-black py-14 lg:py-16">
       <div className="absolute inset-0">
-        <video
+        <LazyVideo
           src="https://res.cloudinary.com/j7bavbyz/video/upload/v1787834819/new_in.mp4"
-          autoPlay
           loop
           muted
           playsInline

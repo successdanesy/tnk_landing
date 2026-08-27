@@ -1,4 +1,5 @@
 import { Reveal } from "../components/Reveal";
+import { LazyVideo } from "../components/LazyVideo";
 
 export function Proof() {
   return (
@@ -9,10 +10,9 @@ export function Proof() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal direction="right">
             <div className="overflow-hidden rounded-2xl border border-tnk-yellow/30 bg-tnk-charcoal aspect-video relative shadow-lg">
-              <video
+              <LazyVideo
                 src="https://res.cloudinary.com/j7bavbyz/video/upload/v1787844699/inuu.mp4"
                 controls
-                autoPlay
                 loop
                 playsInline
                 className="h-full w-full object-cover"
@@ -32,10 +32,9 @@ export function Proof() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 lg:[&>*:first-child]:order-2">
           <Reveal direction="left">
             <div className="overflow-hidden rounded-2xl border border-tnk-yellow/30 bg-tnk-charcoal aspect-video relative shadow-lg">
-              <video
+              <LazyVideo
                 src="https://res.cloudinary.com/j7bavbyz/video/upload/v1787842997/aii.mp4"
                 controls
-                autoPlay
                 loop
                 playsInline
                 className="h-full w-full object-cover"

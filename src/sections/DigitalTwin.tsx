@@ -1,4 +1,5 @@
 import { Reveal } from "../components/Reveal";
+import { LazyVideo } from "../components/LazyVideo";
 
 export function DigitalTwin() {
   return (
@@ -60,10 +61,9 @@ export function DigitalTwin() {
           {/* The Output */}
           <Reveal delay={0.3} direction="left">
             <div className="overflow-hidden rounded-2xl border border-tnk-yellow/30 bg-tnk-charcoal aspect-[4/5] relative">
-              <video
+              <LazyVideo
                 src="https://res.cloudinary.com/j7bavbyz/video/upload/v1787766681/Happy_New_Month_Wishes_202608261044.mp4"
                 controls
-                autoPlay
                 loop
                 playsInline
                 className="h-full w-full object-cover"
