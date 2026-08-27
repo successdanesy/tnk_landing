@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Dark tokens — kept for sections not yet migrated to the light rebrand */
+  --color-tnk-black: #06070a;
+  --color-tnk-charcoal: #0f1116;
+
+  /* Light rebrand palette */
+  --color-tnk-paper: #f6f4ef;
+  --color-tnk-ink: #14151a;
+  --color-tnk-mute: #5c5f66;
+  --color-tnk-line: #e6e2d9;
+
+  /* Brand accents */
+  --color-tnk-yellow: #f4c02a;
+  --color-tnk-yellow-soft: #f9d668;
+  --color-tnk-blue: #3d6bff;
+  --color-tnk-blue-soft: #7fa1ff;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-tnk-paper);
+  color: var(--color-tnk-ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-tnk-yellow);
+  color: #06070a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-tnk-paper);
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d3c7;
+  border-radius: 8px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tnk-eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.tnk-noise {
+  position: relative;
+}
+.tnk-noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.tnk-gradient-black {
+  background: linear-gradient(180deg, rgba(6,7,10,0) 0%, rgba(6,7,10,0.85) 65%, #06070a 100%);
+}
+
+.tnk-vignette {
+  background: radial-gradient(120% 120% at 50% 20%, rgba(0,0,0,0) 0%, rgba(6,7,10,0.55) 60%, rgba(6,7,10,0.95) 100%);
+}
