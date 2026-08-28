@@ -54,15 +54,19 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         {/* Logo */}
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-tnk-yellow">
-            <span className="h-2 w-2 rounded-[2px] bg-tnk-black" />
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-tnk-yellow p-[5px]">
+            <img
+              src="/photos/logo.png"
+              alt="Tnklabs logo"
+              className="h-full w-full object-contain"
+            />
           </span>
           <span
             className={`font-display text-base font-bold tracking-tight transition-colors ${
               solid ? "text-tnk-ink" : "text-white"
             }`}
           >
-            Tnklabs
+            Tnk Labs
           </span>
         </a>
 
@@ -95,20 +99,21 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* Right action */}
-        <a
-          href="https://calendly.com/hellotnklabs/30min"
-          className="hidden rounded-full bg-tnk-yellow px-5 py-2.5 font-display text-sm font-semibold text-tnk-black transition-transform hover:-translate-y-0.5 lg:inline-flex"
-        >
-          Book a Call
-        </a>
+        {/* Right actions — CTA stays visible on mobile (like the inspo), next to the toggle */}
+        <div className="flex items-center gap-3 sm:gap-4">
+          <a
+            href="https://calendly.com/hellotnklabs/30min"
+            className="inline-flex rounded-full bg-tnk-yellow px-4 py-2 font-display text-xs font-semibold text-tnk-black transition-transform hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-sm"
+          >
+            Book a Call
+          </a>
 
-        {/* Mobile toggle */}
-        <button
-          aria-label="Toggle menu"
-          className="flex flex-col gap-1.5 lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
+          {/* Mobile toggle */}
+          <button
+            aria-label="Toggle menu"
+            className="flex flex-col gap-1.5 lg:hidden"
+            onClick={() => setOpen((v) => !v)}
+          >
           <span
             className={`h-[1.5px] w-7 transition-transform ${solid ? "bg-tnk-ink" : "bg-white"} ${
               open ? "translate-y-[7px] rotate-45" : ""
@@ -124,7 +129,8 @@ export function Navbar() {
               open ? "-translate-y-[7px] -rotate-45" : ""
             }`}
           />
-        </button>
+          </button>
+        </div>
       </div>
 
       {open && (
