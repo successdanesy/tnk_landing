@@ -35,7 +35,7 @@ const items = [
 
 export function WhatWeBuild() {
   return (
-    <section className="relative w-full overflow-hidden bg-tnk-black py-14 lg:py-16">
+    <section id="system" className="relative w-full overflow-hidden bg-tnk-black py-14 lg:py-16">
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <div className="max-w-2xl">
           <Reveal>

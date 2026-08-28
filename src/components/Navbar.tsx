@@ -100,7 +100,7 @@ export function Navbar() {
         </nav>
 
         {/* Right actions — CTA stays visible on mobile (like the inspo), next to the toggle */}
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-8 sm:gap-4">
           <a
             href="https://calendly.com/hellotnklabs/30min"
             className="inline-flex rounded-full bg-tnk-yellow px-4 py-2 font-display text-xs font-semibold text-tnk-black transition-transform hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-sm"
@@ -108,27 +108,27 @@ export function Navbar() {
             Book a Call
           </a>
 
-          {/* Mobile toggle */}
+          {/* Mobile toggle — middle bar shorter, like the inspo */}
           <button
             aria-label="Toggle menu"
-            className="flex flex-col gap-1.5 lg:hidden"
+            className="flex flex-col items-end gap-[6px] lg:hidden"
             onClick={() => setOpen((v) => !v)}
           >
-          <span
-            className={`h-[1.5px] w-7 transition-transform ${solid ? "bg-tnk-ink" : "bg-white"} ${
-              open ? "translate-y-[7px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`h-[1.5px] w-7 transition-opacity ${solid ? "bg-tnk-ink" : "bg-white"} ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`h-[1.5px] w-7 transition-transform ${solid ? "bg-tnk-ink" : "bg-white"} ${
-              open ? "-translate-y-[7px] -rotate-45" : ""
-            }`}
-          />
+            <span
+              className={`h-[2px] w-7 origin-center transition-all duration-300 ${
+                solid ? "bg-tnk-ink" : "bg-white"
+              } ${open ? "translate-y-[8px] rotate-45" : ""}`}
+            />
+            <span
+              className={`h-[2px] w-4 transition-all duration-300 ${
+                solid ? "bg-tnk-ink" : "bg-white"
+              } ${open ? "w-7 opacity-0" : ""}`}
+            />
+            <span
+              className={`h-[2px] w-7 origin-center transition-all duration-300 ${
+                solid ? "bg-tnk-ink" : "bg-white"
+              } ${open ? "-translate-y-[8px] -rotate-45" : ""}`}
+            />
           </button>
         </div>
       </div>

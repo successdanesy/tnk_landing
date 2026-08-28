@@ -1,9 +1,8 @@
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Hero } from "./sections/Hero";
-import { StoryReveal } from "./sections/StoryReveal";
-import { InvisibleFounder } from "./sections/InvisibleFounder";
-import { DeeperNeed } from "./sections/DeeperNeed";
+import { Dilemma } from "./sections/Dilemma";
+import { Reframe } from "./sections/Reframe";
 import { RevealBrand } from "./sections/RevealBrand";
 import { BigIdea } from "./sections/BigIdea";
 import { WhatWeBuild } from "./sections/WhatWeBuild";
@@ -20,15 +19,13 @@ export default function App() {
       <Navbar />
 
       <main>
-        {/* SCENE — The founder's world (Story) */}
-        <div id="story">
-          <Hero />
-          <StoryReveal />
-          <InvisibleFounder />
-        </div>
+        <Hero />
 
-        {/* SCENE — The deeper need */}
-        <DeeperNeed />
+        {/* SCENE — The founder's dilemma */}
+        <Dilemma />
+
+        {/* SCENE — The reframe */}
+        <Reframe />
 
         {/* SCENE — The TNK reveal (Answer) */}
         <RevealBrand />
