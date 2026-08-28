@@ -2,35 +2,38 @@ import { Reveal, RevealText } from "../components/Reveal";
 
 export function RevealBrand() {
   return (
-    <section className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-tnk-black px-6 py-32 text-center">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[60vh] w-[60vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-tnk-yellow/10 blur-[140px]" />
-        <div className="absolute right-1/4 top-1/3 h-[40vh] w-[40vh] rounded-full bg-tnk-blue/10 blur-[130px]" />
-      </div>
+    <section className="w-full bg-white py-24 text-center lg:py-32">
+      <div className="mx-auto max-w-3xl px-6">
+        {/* Logo lockup — mark + wordmark stand in for a "Meet TNK Labs" line */}
+        <RevealText>
+          <div className="flex items-center justify-center gap-3 sm:gap-4">
+            <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-tnk-yellow p-2 sm:h-16 sm:w-16 sm:p-2.5 lg:h-[4.5rem] lg:w-[4.5rem]">
+              <img
+                src="/photos/logo.png"
+                alt=""
+                aria-hidden="true"
+                className="h-full w-full object-contain"
+              />
+            </span>
+            <span className="font-display text-5xl font-bold tracking-tight text-tnk-ink sm:text-6xl lg:text-7xl">
+              Tnklabs
+            </span>
+          </div>
+        </RevealText>
 
-      <Reveal duration={1.1}>
-        <p className="tnk-eyebrow font-display text-[14px] sm:text-base font-black tracking-[0.5em] text-white">MEET TNK LABS.</p>
-      </Reveal>
+        <Reveal delay={0.2} className="mt-8">
+          <h2 className="text-balance font-display text-xl font-semibold uppercase tracking-wide text-tnk-ink sm:text-2xl">
+            The presence behind the founder.
+          </h2>
+        </Reveal>
 
-      <RevealText delay={0.15} className="mt-6">
-        <h2 className="font-display text-[16vw] font-bold leading-none tracking-tight text-tnk-yellow sm:text-8xl lg:text-[10rem]">
-          Tnklabs
-        </h2>
-      </RevealText>
-
-      <div className="relative z-10 mt-14 max-w-3xl space-y-3">
-        <Reveal delay={0.45}>
-          <h3 className="text-balance font-display text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl lg:text-5xl">
-            THE PRESENCE BEHIND THE FOUNDER.
-          </h3>
+        <Reveal delay={0.35} className="mx-auto mt-5 max-w-xl">
+          <p className="text-balance text-base font-light leading-relaxed text-tnk-mute sm:text-lg">
+            AI-powered content systems that keep founders visible and building authority,
+            without taking time away from the business.
+          </p>
         </Reveal>
       </div>
-
-      <Reveal delay={0.75} className="mt-8 max-w-2xl">
-        <p className="text-balance text-base font-light text-white/75 sm:text-lg">
-          We build AI-powered content systems that help founders stay visible, build authority and create opportunities without taking time away from the business.
-        </p>
-      </Reveal>
     </section>
   );
 }

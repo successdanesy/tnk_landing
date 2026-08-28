@@ -35,8 +35,7 @@ export function Hero() {
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-[20svh] sm:justify-center sm:pb-16 sm:pt-24 lg:justify-start lg:px-16 lg:pt-40"
       >
-        {/* eyebrow hidden on phones (the inspo goes straight to the headline) */}
-        <p className="tnk-eyebrow mb-6 hidden font-display text-[11px] font-semibold text-white/80 sm:block">
+        <p className="tnk-eyebrow mb-5 font-display text-[10px] font-semibold text-white/80 sm:mb-6 sm:text-[11px]">
           The presence behind the founder
         </p>
 
