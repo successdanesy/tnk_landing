@@ -4,9 +4,8 @@ import { Hero } from "./sections/Hero";
 import { Dilemma } from "./sections/Dilemma";
 import { Reframe } from "./sections/Reframe";
 import { RevealBrand } from "./sections/RevealBrand";
-import { BigIdea } from "./sections/BigIdea";
 import { WhatWeBuild } from "./sections/WhatWeBuild";
-import { DigitalTwin } from "./sections/DigitalTwin";
+import { BigIdea } from "./sections/BigIdea";
 import { Transformation } from "./sections/Transformation";
 import { Proof } from "./sections/Proof";
 import { WhoThisFor } from "./sections/WhoThisFor";
@@ -27,13 +26,12 @@ export default function App() {
         {/* SCENE — The reframe */}
         <Reframe />
 
-        {/* SCENE — The TNK reveal (Answer) */}
+        {/* SCENE — Who we are */}
         <RevealBrand />
-        <BigIdea />
 
-        {/* SCENE — The content engine (System) */}
+        {/* SCENE — What we build + the content engine / digital twin */}
         <WhatWeBuild />
-        <DigitalTwin />
+        <BigIdea />
 
         {/* SCENE — The evidence (Proof) */}
         <Proof />

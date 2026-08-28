@@ -35,7 +35,7 @@ const items = [
 
 export function WhatWeBuild() {
   return (
-    <section id="system" className="w-full bg-white py-20 lg:py-28">
+    <section id="system" className="w-full bg-tnk-paper py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <div className="max-w-2xl">
           <Reveal>
