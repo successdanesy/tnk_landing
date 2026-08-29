@@ -28,12 +28,12 @@ export function Hero() {
           Stays clear over the lower half so the photo reads clean. */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-transparent" />
 
-      {/* Content — sits a little lower on phones, raised toward the top on desktop */}
+      {/* Content — top-weighted on phones, vertically centred from sm up */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-[20svh] sm:justify-center sm:pb-16 sm:pt-24 lg:justify-start lg:px-16 lg:pt-40"
+        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-[20svh] sm:justify-center sm:pb-16 sm:pt-24 lg:px-16"
       >
         <p className="tnk-eyebrow mb-5 font-display text-[10px] font-semibold text-white/80 sm:mb-6 sm:text-[11px]">
           The presence behind the founder

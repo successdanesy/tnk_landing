@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { Hero } from "./sections/Hero";
 import { Dilemma } from "./sections/Dilemma";
 import { Reframe } from "./sections/Reframe";
@@ -42,6 +43,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

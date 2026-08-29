@@ -1,53 +1,58 @@
 import { Reveal } from "../components/Reveal";
-import { CTAButton } from "../components/CTAButton";
 
 export function FinalCTA() {
   return (
-    <section
-      id="book-a-call"
-      className="w-full border-t border-tnk-line bg-white py-24 lg:py-32"
-    >
-      <div className="mx-auto flex max-w-3xl flex-col items-center px-6 text-center">
-        <Reveal>
-          <span className="inline-block rounded-full bg-tnk-yellow px-4 py-1.5 font-display text-xs font-semibold tracking-tight text-tnk-black">
-            Full circle
-          </span>
-        </Reveal>
+    <section id="book-a-call" className="relative z-10">
+      {/* white top area — flow-root so its height shrinks with the card's negative
+          margin, letting the card's lower half spill onto the dark footer below */}
+      <div className="[display:flow-root] bg-white pt-24 lg:pt-28">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <div className="relative z-20 -mb-32 overflow-hidden rounded-3xl bg-tnk-yellow px-6 py-10 sm:-mb-44 sm:px-12 sm:py-12 lg:-mb-56 lg:px-16 lg:py-16">
+            {/* faint blueprint-style decoration — small corner accent on phones,
+                a taller cluster from sm up */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 300 240"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="pointer-events-none absolute bottom-0 right-0 h-40 w-auto translate-x-5 translate-y-5 text-tnk-black/[0.07] sm:bottom-auto sm:right-[-1.5rem] sm:top-1/2 sm:h-[135%] sm:translate-x-0 sm:-translate-y-1/2 sm:text-tnk-black/[0.12]"
+            >
+              <rect x="118" y="42" width="92" height="150" rx="18" transform="rotate(18 164 117)" />
+              <rect x="168" y="18" width="82" height="140" rx="16" transform="rotate(-14 209 88)" />
+              <circle cx="86" cy="150" r="56" />
+              <path d="M248 168 l42 -14 -14 42 -12 -20 -16 -8z" />
+            </svg>
 
-        <Reveal delay={0.15} className="mt-7">
-          <h2 className="text-balance font-display text-4xl font-semibold leading-[1.08] tracking-tight text-tnk-ink sm:text-5xl lg:text-6xl">
-            Your company is building.
-            <span className="mt-2 block">
-              Your personal brand should be{" "}
-              <span className="box-decoration-clone rounded-md bg-tnk-yellow px-2 text-tnk-black">
-                too.
-              </span>
-            </span>
-          </h2>
-        </Reveal>
+            <Reveal
+              direction="none"
+              className="relative mx-auto max-w-xl text-center sm:mx-0 sm:text-left"
+            >
+              <h2 className="text-balance font-display text-2xl font-bold leading-[1.15] tracking-tight text-tnk-black sm:text-4xl sm:leading-[1.1] lg:text-5xl">
+                Let&apos;s build the presence behind the founder.
+              </h2>
+              <p className="mx-auto mt-3 max-w-sm text-balance text-base font-light leading-relaxed text-tnk-black/70 sm:mx-0 sm:mt-4 sm:max-w-md sm:text-lg">
+                One strategy call to map it out. No pressure, no generic pitch.
+              </p>
 
-        <Reveal delay={0.3} className="mt-6 max-w-xl">
-          <p className="text-balance text-base font-light leading-relaxed text-tnk-mute sm:text-lg">
-            You already have the expertise, the vision and the company. Tnklabs builds the
-            content system that helps the market see it.
-          </p>
-        </Reveal>
-
-        <Reveal
-          delay={0.45}
-          className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row"
-        >
-          <CTAButton>Book a Strategy Call</CTAButton>
-          <CTAButton href="#results" variant="ghost">
-            See how it works
-          </CTAButton>
-        </Reveal>
-
-        <Reveal delay={0.55} className="mt-6">
-          <p className="font-display text-xs uppercase tracking-[0.2em] text-tnk-mute">
-            Let&apos;s build the presence behind the founder.
-          </p>
-        </Reveal>
+              <div className="mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+                <a
+                  href="https://calendly.com/hellotnklabs/30min"
+                  className="inline-flex items-center justify-center rounded-full bg-tnk-black px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-white transition-transform hover:-translate-y-0.5"
+                >
+                  Book a Strategy Call
+                </a>
+                <a
+                  href="#results"
+                  className="group inline-flex items-center justify-center gap-2 font-display text-sm font-medium uppercase tracking-[0.18em] text-tnk-black transition-colors hover:text-tnk-black/60 sm:justify-start"
+                >
+                  See how it works
+                  <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
       </div>
     </section>
   );
