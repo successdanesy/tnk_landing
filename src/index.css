@@ -23,13 +23,17 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-tnk-paper);
+  /* clip (not hidden) so transient transforms from scroll-reveal animations
+     can't open a horizontal scroll gutter, without creating a scroll container */
+  overflow-x: clip;
 }
 
 body {
   background-color: var(--color-tnk-paper);
   color: var(--color-tnk-ink);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
