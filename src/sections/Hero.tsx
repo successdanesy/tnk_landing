@@ -36,15 +36,15 @@ export function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-[20svh] sm:justify-center sm:pb-16 sm:pt-24 lg:px-16"
+        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-28 sm:justify-center sm:pb-16 sm:pt-24 lg:px-16"
       >
-        <p className="tnk-eyebrow mb-5 font-display text-[10px] font-semibold text-white/80 sm:mb-6 sm:text-[11px]">
+        <p className="tnk-eyebrow mb-4 font-display text-[10px] font-semibold text-white/80 sm:mb-6 sm:text-[11px]">
           The presence behind the founder
         </p>
 
-        <h1 className="max-w-2xl font-display text-[1.75rem] leading-[1.14] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.4)] sm:text-4xl sm:leading-[1.16] sm:[text-shadow:none] lg:text-[2.75rem]">
+        <h1 className="max-w-2xl font-display text-[1.7rem] leading-[1.14] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.4)] sm:text-4xl sm:leading-[1.16] sm:[text-shadow:none] lg:text-[2.75rem]">
           <span className="block font-normal text-white/90">You built the company.</span>
-          <span className="my-3 block h-0.5 w-12 bg-tnk-yellow sm:my-5 sm:w-16" />
+          <span className="my-2 block h-0.5 w-12 bg-tnk-yellow sm:my-5 sm:w-16" />
           <span className="block font-semibold">
             Now build the <span className="text-tnk-yellow">presence.</span>
           </span>
@@ -53,7 +53,7 @@ export function Hero() {
         <div>
           <a
             href="https://calendly.com/hellotnklabs/30min"
-            className="group mt-7 inline-flex items-center gap-3 rounded-full bg-tnk-yellow py-2 pl-8 pr-2 font-display text-sm font-semibold text-tnk-black transition-transform duration-300 hover:-translate-y-0.5 sm:mt-9"
+            className="group mt-6 inline-flex items-center gap-3 rounded-full bg-tnk-yellow py-2 pl-8 pr-2 font-display text-sm font-semibold text-tnk-black shadow-[0_12px_34px_-10px_rgba(0,0,0,0.55)] transition-transform duration-300 hover:-translate-y-0.5 sm:mt-9"
           >
             Book a Strategy Call
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-tnk-black text-tnk-yellow transition-transform duration-300 group-hover:rotate-45">
