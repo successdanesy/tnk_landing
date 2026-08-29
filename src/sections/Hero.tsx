@@ -15,11 +15,14 @@ export function Hero() {
       {/* Background image — full-bleed, no overlay. Phones get a purpose-made portrait
           crop so the hero can be tall without the landscape shot looking zoomed in. */}
       <picture>
+        <source media="(max-width: 639px)" type="image/webp" srcSet="/photos/hero-mobile.webp" />
         <source media="(max-width: 639px)" srcSet="/photos/hero-mobile.png" />
+        <source type="image/webp" srcSet="/photos/hero.webp" />
         <img
           src="/photos/hero.png"
           alt="Two founders in conversation across a meeting table"
           fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
       </picture>

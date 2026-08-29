@@ -22,7 +22,8 @@ export function Proof() {
           <Reveal direction="right">
             <div className="relative aspect-video overflow-hidden rounded-2xl border border-tnk-line bg-tnk-ink shadow-sm">
               <LazyVideo
-                src="https://res.cloudinary.com/j7bavbyz/video/upload/v1787842997/aii.mp4"
+                src="https://res.cloudinary.com/j7bavbyz/video/upload/q_auto/v1787842997/aii.mp4"
+                poster="https://res.cloudinary.com/j7bavbyz/video/upload/so_0,f_auto,q_auto,w_960/v1787842997/aii.jpg"
                 controls
                 loop
                 playsInline

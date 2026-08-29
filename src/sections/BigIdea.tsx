@@ -37,8 +37,10 @@ export function BigIdea() {
           <Reveal direction="right">
             <div className="overflow-hidden rounded-2xl border border-tnk-line">
               <img
-                src="https://res.cloudinary.com/j7bavbyz/image/upload/v1787753989/photo_2026-08-26_07-16-16.jpg"
+                src="https://res.cloudinary.com/j7bavbyz/image/upload/f_auto,q_auto,w_640/v1787753989/photo_2026-08-26_07-16-16.jpg"
                 alt="The founder, in their own environment"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
@@ -55,8 +57,10 @@ export function BigIdea() {
           <Reveal delay={0.15}>
             <div className="overflow-hidden rounded-2xl border border-tnk-blue/30">
               <img
-                src="https://res.cloudinary.com/j7bavbyz/image/upload/v1787754023/photo_2026-08-26_07-16-27.jpg"
+                src="https://res.cloudinary.com/j7bavbyz/image/upload/f_auto,q_auto,w_640/v1787754023/photo_2026-08-26_07-16-27.jpg"
                 alt="An abstract digital twin representation"
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
@@ -73,7 +77,8 @@ export function BigIdea() {
           <Reveal delay={0.3} direction="left">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-tnk-yellow/50 bg-tnk-paper">
               <LazyVideo
-                src="https://res.cloudinary.com/j7bavbyz/video/upload/v1787766681/Happy_New_Month_Wishes_202608261044.mp4"
+                src="https://res.cloudinary.com/j7bavbyz/video/upload/q_auto/v1787766681/Happy_New_Month_Wishes_202608261044.mp4"
+                poster="https://res.cloudinary.com/j7bavbyz/video/upload/so_0,f_auto,q_auto,w_640/v1787766681/Happy_New_Month_Wishes_202608261044.jpg"
                 controls
                 loop
                 playsInline

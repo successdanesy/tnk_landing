@@ -21,6 +21,10 @@ export function RevealBrand() {
             key={a.src}
             src={a.src}
             alt=""
+            loading="lazy"
+            decoding="async"
+            width="64"
+            height="64"
             className={`absolute h-12 w-12 rounded-full object-cover shadow-[0_12px_30px_-10px_rgba(0,0,0,0.3)] ring-4 ring-white sm:h-14 sm:w-14 lg:h-16 lg:w-16 ${a.cls}`}
           />
         ))}
@@ -47,6 +51,8 @@ export function RevealBrand() {
                 src="/photos/logo.png"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-contain"
               />
             </span>

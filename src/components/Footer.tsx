@@ -18,6 +18,8 @@ export function Footer() {
                   src="/photos/logo.png"
                   alt=""
                   aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-contain"
                 />
               </span>

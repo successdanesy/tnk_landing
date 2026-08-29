@@ -65,7 +65,7 @@ export function Navbar() {
               solid ? "text-tnk-ink" : "text-white"
             }`}
           >
-            Tnk Labs
+            Tnklabs
           </span>
         </a>
 
