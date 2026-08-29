@@ -6,7 +6,6 @@ import { Reframe } from "./sections/Reframe";
 import { RevealBrand } from "./sections/RevealBrand";
 import { WhatWeBuild } from "./sections/WhatWeBuild";
 import { BigIdea } from "./sections/BigIdea";
-import { Transformation } from "./sections/Transformation";
 import { Proof } from "./sections/Proof";
 import { WhoThisFor } from "./sections/WhoThisFor";
 import { FAQ } from "./sections/FAQ";
@@ -20,29 +19,24 @@ export default function App() {
       <main>
         <Hero />
 
-        {/* SCENE — The founder's dilemma */}
+        {/* The founder's dilemma */}
         <Dilemma />
-
-        {/* SCENE — The reframe */}
         <Reframe />
 
-        {/* SCENE — Who we are */}
+        {/* Who we are */}
         <RevealBrand />
 
-        {/* SCENE — What we build + the content engine / digital twin */}
+        {/* What we build + the content engine / digital twin */}
         <WhatWeBuild />
         <BigIdea />
 
-        {/* SCENE — The evidence (Proof) */}
+        {/* Proof */}
         <Proof />
 
-        {/* SCENE — The transformation */}
-        <Transformation />
-
-        {/* SCENE — The trust */}
+        {/* Who it's for */}
         <WhoThisFor />
 
-        {/* SCENE — The decision */}
+        {/* The decision */}
         <FAQ />
         <FinalCTA />
       </main>

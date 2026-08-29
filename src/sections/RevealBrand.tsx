@@ -13,7 +13,7 @@ const avatars = [
 
 export function RevealBrand() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pb-36 pt-36 lg:py-32">
+    <section id="about" className="relative w-full overflow-hidden bg-white pb-36 pt-36 lg:py-32">
       {/* Floating founder avatars — placeholders, swap for real client photos */}
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         {avatars.map((a) => (

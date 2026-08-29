@@ -16,7 +16,7 @@ export function CTAButton({
       <a
         href={href}
         className={cn(
-          "group inline-flex items-center gap-2 font-display text-sm font-medium uppercase tracking-[0.18em] text-white/80 transition-colors hover:text-tnk-yellow",
+          "group inline-flex items-center gap-2 font-display text-sm font-medium uppercase tracking-[0.18em] text-tnk-ink transition-colors hover:text-tnk-mute",
           className
         )}
       >

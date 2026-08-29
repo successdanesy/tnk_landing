@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { label: "Story", href: "#story" },
-  { label: "The System", href: "#system" },
+  { label: "Who we are", href: "#about" },
+  { label: "What we build", href: "#system" },
   { label: "Results", href: "#results" },
-  { label: "Why TNK", href: "#why-tnk" },
   { label: "FAQ", href: "#faq" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<string>("#story");
+  const [active, setActive] = useState<string>("#about");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);

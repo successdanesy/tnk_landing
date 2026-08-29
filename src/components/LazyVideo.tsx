@@ -1,47 +1,14 @@
-import { useEffect, useRef, type VideoHTMLAttributes } from "react";
-
-type LazyVideoProps = VideoHTMLAttributes<HTMLVideoElement> & {
-  /** Play only while scrolled into view, pause when it leaves. Default: true */
-  playOnVisible?: boolean;
-};
+import type { VideoHTMLAttributes } from "react";
 
 /**
- * A <video> that never autoplays on load. Instead it starts playing when it
- * scrolls into view and pauses when it leaves, so several videos on one page
- * don't all fire (and download) at once on reload.
+ * A <video> that never autoplays and never loads its full stream on page load.
+ * `preload="metadata"` shows a first frame and the native play button; the viewer
+ * clicks to play. So videos never fire off one after another on their own.
  */
 export function LazyVideo({
-  playOnVisible = true,
-  preload = "none",
+  preload = "metadata",
   className,
   ...props
-}: LazyVideoProps) {
-  const ref = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || !playOnVisible) return;
-
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !prefersReduced) {
-          // play() rejects when the browser blocks unmuted autoplay — ignore it,
-          // the user can press play via the controls.
-          void el.play().catch(() => {});
-        } else if (!el.paused) {
-          el.pause();
-        }
-      },
-      { threshold: 0.2, rootMargin: "100px 0px" }
-    );
-
-    io.observe(el);
-    return () => io.disconnect();
-  }, [playOnVisible]);
-
-  return <video ref={ref} preload={preload} className={className} {...props} />;
+}: VideoHTMLAttributes<HTMLVideoElement>) {
+  return <video preload={preload} className={className} {...props} />;
 }
