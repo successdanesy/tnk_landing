@@ -21,6 +21,27 @@
   --font-body: "Manrope", sans-serif;
 }
 
+/* Hero content mount animation (replaces a framer-motion initial/animate) */
+@keyframes tnk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tnk-rise {
+  animation: tnk-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tnk-rise {
+    animation: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   background-color: var(--color-tnk-paper);

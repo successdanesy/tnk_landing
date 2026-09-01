@@ -1,15 +1,65 @@
-import { motion, type Variants } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 type Direction = "up" | "down" | "left" | "right" | "none";
 
-const offset: Record<Direction, { x?: number; y?: number }> = {
-  up: { y: 40 },
-  down: { y: -40 },
-  left: { x: 40 },
-  right: { x: -40 },
-  none: {},
+const hiddenTransform: Record<Direction, string> = {
+  up: "translateY(40px)",
+  down: "translateY(-40px)",
+  left: "translateX(40px)",
+  right: "translateX(-40px)",
+  none: "none",
 };
+
+const EASE = "cubic-bezier(0.16, 1, 0.3, 1)";
+
+function prefersReducedMotion() {
+  return (
+    typeof window !== "undefined" &&
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+}
+
+/**
+ * Scroll-in reveal. IntersectionObserver + CSS transitions, no animation library.
+ * The trigger fires when the element's top passes ~85% of the viewport height,
+ * which stays reliable for elements taller than the viewport (a threshold on
+ * `amount` would never resolve for those).
+ */
+function useInView(once: boolean) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (prefersReducedMotion() || typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          // Reveal when the element enters the viewport, but also when it is
+          // already at or above the fold (deep-link jump, reload while scrolled,
+          // a fast fling that skips it) so it can never stay stuck invisible.
+          const alreadyPassed = entry.boundingClientRect.top < window.innerHeight;
+          if (entry.isIntersecting || alreadyPassed) {
+            setInView(true);
+            if (once) io.unobserve(entry.target);
+          } else if (!once) {
+            setInView(false);
+          }
+        }
+      },
+      { rootMargin: "0px 0px -15% 0px", threshold: 0.01 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [once]);
+
+  return { ref, inView };
+}
 
 export function Reveal({
   children,
@@ -18,7 +68,6 @@ export function Reveal({
   duration = 0.9,
   className = "",
   once = true,
-  amount = 0.25,
 }: {
   children: ReactNode;
   direction?: Direction;
@@ -26,28 +75,24 @@ export function Reveal({
   duration?: number;
   className?: string;
   once?: boolean;
+  /** kept for call-site compatibility; trigger point is handled via rootMargin */
   amount?: number;
 }) {
-  const variants: Variants = {
-    hidden: { opacity: 0, ...offset[direction] },
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: { duration, delay, ease: [0.16, 1, 0.3, 1] },
-    },
-  };
+  const { ref, inView } = useInView(once);
 
   return (
-    <motion.div
+    <div
+      ref={ref}
       className={className}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, amount }}
-      variants={variants}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "none" : hiddenTransform[direction],
+        transition: `opacity ${duration}s ${EASE} ${delay}s, transform ${duration}s ${EASE} ${delay}s`,
+        willChange: "opacity, transform",
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
 
@@ -62,15 +107,21 @@ export function RevealText({
   delay?: number;
   once?: boolean;
 }) {
+  const { ref, inView } = useInView(once);
+
   return (
-    <motion.div
+    <div
+      ref={ref}
       className={className}
-      initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once, amount: 0.4 }}
-      transition={{ duration: 1, delay, ease: [0.16, 1, 0.3, 1] }}
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "none" : "translateY(24px)",
+        filter: inView ? "blur(0px)" : "blur(6px)",
+        transition: `opacity 1s ${EASE} ${delay}s, transform 1s ${EASE} ${delay}s, filter 1s ${EASE} ${delay}s`,
+        willChange: "opacity, transform, filter",
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

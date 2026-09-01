@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const cards = [
   { label: "Authority", sub: "The recognised voice in your space" },
   { label: "Visibility", sub: "A presence where your buyers look" },
@@ -13,13 +11,12 @@ export function Hero() {
       className="relative flex h-[88svh] min-h-[560px] w-full flex-col overflow-hidden bg-tnk-charcoal sm:h-[86svh] lg:h-[100svh]"
     >
       {/* Background image — full-bleed, no overlay. Phones get a purpose-made portrait
-          crop so the hero can be tall without the landscape shot looking zoomed in. */}
+          crop so the hero can be tall without the landscape shot looking zoomed in.
+          WebP only (universal support); the mobile crop wins below 640px. */}
       <picture>
         <source media="(max-width: 639px)" type="image/webp" srcSet="/photos/hero-mobile.webp" />
-        <source media="(max-width: 639px)" srcSet="/photos/hero-mobile.png" />
-        <source type="image/webp" srcSet="/photos/hero.webp" />
         <img
-          src="/photos/hero.png"
+          src="/photos/hero.webp"
           alt="Two founders in conversation across a meeting table"
           fetchPriority="high"
           decoding="async"
@@ -32,11 +29,8 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-transparent" />
 
       {/* Content — top-weighted on phones, vertically centred from sm up */}
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-28 sm:justify-center sm:pb-16 sm:pt-24 lg:px-16"
+      <div
+        className="tnk-rise relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-28 sm:justify-center sm:pb-16 sm:pt-24 lg:px-16"
       >
         <p className="tnk-eyebrow mb-4 font-display text-[10px] font-semibold text-white/80 sm:mb-6 sm:text-[11px]">
           The presence behind the founder
@@ -71,7 +65,7 @@ export function Hero() {
             </span>
           </a>
         </div>
-      </motion.div>
+      </div>
 
       {/* Feature cards — inspo-style row resting on the base of the hero */}
       <div className="absolute inset-x-0 bottom-0 z-20 px-6 pb-5 lg:px-16 lg:pb-8">
