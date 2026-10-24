@@ -6,7 +6,7 @@ import { Dilemma } from "./sections/Dilemma";
 import { Reframe } from "./sections/Reframe";
 import { RevealBrand } from "./sections/RevealBrand";
 import { Services } from "./sections/Services";
-import { Approach } from "./sections/Approach";
+// import { Approach } from "./sections/Approach";
 import { Proof } from "./sections/Proof";
 import { WhoThisFor } from "./sections/WhoThisFor";
 import { FAQ } from "./sections/FAQ";
@@ -22,14 +22,14 @@ export default function App() {
 
         {/* The problem */}
         <Dilemma />
-        <Reframe />
 
         {/* Who we are */}
         <RevealBrand />
+        <Reframe />
 
         {/* What we do + how we approach it */}
         <Services />
-        <Approach />
+        {/* <Approach /> */}
 
         {/* Our work */}
         <Proof />

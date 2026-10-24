@@ -33,15 +33,10 @@ export function WhoThisFor() {
               Who we work with
             </span>
           </Reveal>
-          <Reveal delay={0.15} className="mt-6">
-            <h2 className="text-balance font-display text-3xl font-semibold leading-tight tracking-tight text-tnk-ink sm:text-4xl lg:text-5xl">
-              Advertising solutions for businesses ready to grow.
-            </h2>
-          </Reveal>
         </div>
 
         {/* Flex-wrap rather than grid so the odd fifth card centres on the last row */}
-        <div className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-5 lg:mt-16">
+        <div className="mt-8 flex flex-wrap justify-center gap-4 sm:gap-5 lg:mt-10">
           {audiences.map((a, i) => (
             <Reveal
               key={a.title}

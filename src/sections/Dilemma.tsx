@@ -36,7 +36,7 @@ const points = [
 
 export function Dilemma() {
   return (
-    <section id="problem" className="w-full bg-white py-20 lg:py-28">
+    <section id="problem" className="w-full bg-tnk-paper py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <Reveal>
           <span className="inline-block rounded-full bg-tnk-yellow px-4 py-1.5 font-display text-xs font-semibold tracking-tight text-tnk-black">

@@ -20,7 +20,7 @@ const projects = [
   },
   {
     tag: "Book Promotion",
-    title: "A book on the digital economy needed an ad that made people want to read it.",
+    title: "An author needed to put their book on the digital economy in front of the right readers.",
     desc: "A vertical video ad that brings the book's insights to life and shows readers what they will learn, made for social feeds and paid campaigns.",
     src: "/videos/digital-economy-book.mp4",
     portrait: true,

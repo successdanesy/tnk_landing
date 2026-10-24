@@ -35,7 +35,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="w-full bg-tnk-paper py-20 lg:py-28">
+    <section id="services" className="w-full bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
@@ -54,7 +54,7 @@ export function Services() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:mt-16">
           {services.map((s, i) => (
             <Reveal key={s.n} delay={0.08 * (i % 2)} className="h-full">
-              <article className="h-full rounded-[1.25rem] border border-tnk-ink/80 bg-white p-7 sm:p-8">
+              <article className="h-full rounded-[1.25rem] border border-tnk-ink/80 bg-tnk-paper/60 p-7 sm:p-8">
                 <span className="inline-flex rounded-full border border-tnk-ink/80 bg-tnk-yellow px-3 py-1 font-display text-xs font-bold text-tnk-black">
                   {s.n}
                 </span>

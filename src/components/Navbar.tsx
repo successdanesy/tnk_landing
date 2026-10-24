@@ -102,7 +102,7 @@ export function Navbar() {
         <div className="flex items-center gap-8 sm:gap-4">
           <a
             href="https://calendly.com/hellotnklabs/30min"
-            className="inline-flex rounded-full bg-tnk-yellow px-4 py-2 font-display text-xs font-semibold text-tnk-black transition-transform hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-sm"
+            className="hidden rounded-full bg-tnk-yellow px-4 py-2 font-display text-xs font-semibold text-tnk-black transition-transform hover:-translate-y-0.5 sm:inline-flex sm:px-5 sm:py-2.5 sm:text-sm"
           >
             Work With Us
           </a>
