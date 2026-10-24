@@ -2,7 +2,8 @@ import { Reveal } from "../components/Reveal";
 
 const points = [
   {
-    title: "You should be visible",
+    title: "Ads that capture attention",
+    sub: "Your ads need to stop the scroll.",
     icon: (
       <>
         <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
@@ -11,16 +12,8 @@ const points = [
     ),
   },
   {
-    title: "Your expertise matters",
-    icon: (
-      <>
-        <circle cx="12" cy="8" r="5" />
-        <path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5" />
-      </>
-    ),
-  },
-  {
-    title: "Your audience should hear from you",
+    title: "A message that connects",
+    sub: "Your message needs to land with potential customers.",
     icon: (
       <>
         <path d="M3 11v2a1 1 0 0 0 1 1h3l4 4V6L7 10H4a1 1 0 0 0-1 1z" />
@@ -28,11 +21,22 @@ const points = [
       </>
     ),
   },
+  {
+    title: "A strategy behind it",
+    sub: "Your campaigns need a plan for reaching the right people.",
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <circle cx="12" cy="12" r="5" />
+        <circle cx="12" cy="12" r="1" />
+      </>
+    ),
+  },
 ];
 
 export function Dilemma() {
   return (
-    <section id="story" className="w-full bg-white py-20 lg:py-28">
+    <section id="problem" className="w-full bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <Reveal>
           <span className="inline-block rounded-full bg-tnk-yellow px-4 py-1.5 font-display text-xs font-semibold tracking-tight text-tnk-black">
@@ -42,11 +46,16 @@ export function Dilemma() {
 
         <Reveal delay={0.1} className="mt-7">
           <h2 className="text-balance font-display text-3xl leading-[1.18] tracking-tight text-tnk-ink/80 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.16]">
-            Building a company is already a{" "}
-            <span className="font-bold text-tnk-ink">full-time job.</span> And somewhere along
-            the way, your personal brand became{" "}
-            <span className="font-bold text-tnk-ink">another job.</span>
+            Your business deserves more than{" "}
+            <span className="font-bold text-tnk-ink">ordinary advertising.</span>
           </h2>
+        </Reveal>
+
+        <Reveal delay={0.2} className="mx-auto mt-6 max-w-xl">
+          <p className="text-balance text-base font-light leading-relaxed text-tnk-mute sm:text-lg">
+            Getting your business in front of the right audience takes more than simply posting
+            content.
+          </p>
         </Reveal>
       </div>
 
@@ -74,11 +83,12 @@ export function Dilemma() {
             <h3 className="mt-5 max-w-[14rem] text-balance font-display text-lg font-semibold tracking-tight text-tnk-ink">
               {p.title}
             </h3>
-            <p className="mt-2 text-sm font-light text-tnk-mute">And you know it.</p>
+            <p className="mt-2 max-w-[16rem] text-balance text-sm font-light text-tnk-mute">
+              {p.sub}
+            </p>
           </Reveal>
         ))}
       </div>
-
     </section>
   );
 }

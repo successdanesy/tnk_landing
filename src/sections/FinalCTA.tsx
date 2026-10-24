@@ -2,7 +2,7 @@ import { Reveal } from "../components/Reveal";
 
 export function FinalCTA() {
   return (
-    <section id="book-a-call" className="relative z-10">
+    <section id="contact" className="relative z-10">
       {/* white top area — flow-root so its height shrinks with the card's negative
           margin, letting the card's lower half spill onto the dark footer below */}
       <div className="[display:flow-root] bg-white pt-24 lg:pt-28">
@@ -29,10 +29,11 @@ export function FinalCTA() {
               className="relative mx-auto max-w-xl text-center sm:mx-0 sm:text-left"
             >
               <h2 className="text-balance font-display text-2xl font-bold leading-[1.15] tracking-tight text-tnk-black sm:text-4xl sm:leading-[1.1] lg:text-5xl">
-                Let&apos;s build the presence behind the founder.
+                Ready to grow your business?
               </h2>
               <p className="mx-auto mt-3 max-w-sm text-balance text-base font-light leading-relaxed text-tnk-black/70 sm:mx-0 sm:mt-4 sm:max-w-md sm:text-lg">
-                One strategy call to map it out. No pressure, no generic pitch.
+                Whether you need high-quality AI video ads, paid advertising management, or both,
+                TNK Labs is ready to help.
               </p>
 
               <div className="mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
@@ -40,10 +41,10 @@ export function FinalCTA() {
                   href="https://calendly.com/hellotnklabs/30min"
                   className="inline-flex items-center justify-center rounded-full bg-tnk-black px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-white transition-transform hover:-translate-y-0.5"
                 >
-                  Book a Strategy Call
+                  Work With Us
                 </a>
                 <a
-                  href="#results"
+                  href="#work"
                   className="group inline-flex items-center justify-center gap-2 font-display text-sm font-medium uppercase tracking-[0.18em] text-tnk-black transition-colors hover:text-tnk-black/60 sm:justify-start"
                 >
                   See how it works

@@ -1,8 +1,8 @@
 const explore = [
-  { label: "Who we are", href: "#about" },
-  { label: "What we build", href: "#system" },
-  { label: "Results", href: "#results" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Who We Are", href: "#about" },
+  { label: "Our Services", href: "#services" },
+  { label: "Our Work", href: "#work" },
+  { label: "FAQs", href: "#faq" },
 ];
 
 export function Footer() {
@@ -24,12 +24,15 @@ export function Footer() {
                 />
               </span>
               <span className="font-display text-lg font-bold tracking-tight text-white">
-                Tnklabs
+                TNK Labs
               </span>
             </a>
-            <p className="mt-4 text-sm font-light leading-relaxed text-white/50">
-              We build the presence behind the founder. AI-powered content systems for founders
-              who are building something that matters.
+            <p className="mt-4 font-display text-sm font-semibold text-white/80">
+              AI-Powered Ad Creation &amp; Paid Advertising.
+            </p>
+            <p className="mt-2 text-sm font-light leading-relaxed text-white/50">
+              We help businesses create compelling ads, reach potential customers, and grow
+              through strategic advertising.
             </p>
           </div>
 
@@ -60,20 +63,14 @@ export function Footer() {
             >
               tnklabss@gmail.com
             </a>
-            <a
-              href="https://calendly.com/hellotnklabs/30min"
-              className="font-display text-sm text-white/70 transition-colors hover:text-white"
-            >
-              Book a strategy call
-            </a>
-            <p className="font-display text-sm text-white/50">Working with founders globally</p>
+            <p className="font-display text-sm text-white/50">Working with businesses globally</p>
           </div>
         </div>
 
         {/* bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-6 sm:flex-row">
           <p className="text-center text-xs font-light text-white/40 sm:text-left">
-            © {new Date().getFullYear()} Tnklabs. Founded by Networking King. All rights reserved.
+            © {new Date().getFullYear()} TNK Labs. Founded by Networking King. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a

@@ -5,8 +5,8 @@ import { Hero } from "./sections/Hero";
 import { Dilemma } from "./sections/Dilemma";
 import { Reframe } from "./sections/Reframe";
 import { RevealBrand } from "./sections/RevealBrand";
-import { WhatWeBuild } from "./sections/WhatWeBuild";
-import { BigIdea } from "./sections/BigIdea";
+import { Services } from "./sections/Services";
+import { Approach } from "./sections/Approach";
 import { Proof } from "./sections/Proof";
 import { WhoThisFor } from "./sections/WhoThisFor";
 import { FAQ } from "./sections/FAQ";
@@ -20,21 +20,21 @@ export default function App() {
       <main>
         <Hero />
 
-        {/* The founder's dilemma */}
+        {/* The problem */}
         <Dilemma />
         <Reframe />
 
         {/* Who we are */}
         <RevealBrand />
 
-        {/* What we build + the content engine / digital twin */}
-        <WhatWeBuild />
-        <BigIdea />
+        {/* What we do + how we approach it */}
+        <Services />
+        <Approach />
 
-        {/* Proof */}
+        {/* Our work */}
         <Proof />
 
-        {/* Who it's for */}
+        {/* Who we work with */}
         <WhoThisFor />
 
         {/* The decision */}

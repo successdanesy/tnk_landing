@@ -1,9 +1,3 @@
-const cards = [
-  { label: "Authority", sub: "The recognised voice in your space" },
-  { label: "Visibility", sub: "A presence where your buyers look" },
-  { label: "Leads", sub: "Content that turns into conversations" },
-];
-
 export function Hero() {
   return (
     <section
@@ -17,7 +11,7 @@ export function Hero() {
         <source media="(max-width: 639px)" type="image/webp" srcSet="/photos/hero-mobile.webp" />
         <img
           src="/photos/hero.webp"
-          alt="Two founders in conversation across a meeting table"
+          alt="Two business owners in conversation across a meeting table"
           fetchPriority="high"
           decoding="async"
           className="absolute inset-0 h-full w-full object-cover object-center"
@@ -26,30 +20,33 @@ export function Hero() {
 
       {/* Small top-weighted tint — keeps the headline readable and darkens behind the nav.
           Stays clear over the lower half so the photo reads clean. */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-transparent" />
 
       {/* Content — top-weighted on phones, vertically centred from sm up */}
       <div
         className="tnk-rise relative z-10 flex flex-1 flex-col justify-start px-6 pb-12 pt-28 sm:justify-center sm:pb-16 sm:pt-24 lg:px-16"
       >
-        <p className="tnk-eyebrow mb-4 font-display text-[10px] font-semibold text-white/80 sm:mb-6 sm:text-[11px]">
-          The presence behind the founder
-        </p>
-
-        <h1 className="max-w-2xl font-display text-[1.7rem] leading-[1.14] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.4)] sm:text-4xl sm:leading-[1.16] sm:[text-shadow:none] lg:text-[2.75rem]">
-          <span className="block font-normal text-white/90">You built the company.</span>
-          <span className="my-2 block h-0.5 w-12 bg-tnk-yellow sm:my-5 sm:w-16" />
+        <h1 className="font-display text-[1.9rem] leading-[1.12] tracking-tight text-white [text-shadow:0_2px_28px_rgba(0,0,0,0.4)] sm:text-[2.6rem] sm:[text-shadow:none] lg:text-[3.25rem]">
+          <span className="block font-normal text-white/85">Create better ads.</span>
+          <span className="block font-normal text-white/85">Reach more customers.</span>
           <span className="block font-semibold">
-            Now build the <span className="text-tnk-yellow">presence.</span>
+            Grow your <span className="text-tnk-yellow">business.</span>
           </span>
         </h1>
 
-        <div>
+        <span className="my-5 block h-0.5 w-12 bg-tnk-yellow sm:my-7 sm:w-16" />
+
+        <p className="max-w-md text-sm font-light leading-relaxed text-white/80 [text-shadow:0_1px_18px_rgba(0,0,0,0.45)] sm:text-base">
+          AI-powered video ads and strategic paid advertising that help businesses reach the
+          right audience, generate leads, and drive sales.
+        </p>
+
+        <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-4 sm:mt-9">
           <a
             href="https://calendly.com/hellotnklabs/30min"
-            className="group mt-6 inline-flex items-center gap-3 rounded-full bg-tnk-yellow py-2 pl-8 pr-2 font-display text-sm font-semibold text-tnk-black shadow-[0_12px_34px_-10px_rgba(0,0,0,0.55)] transition-transform duration-300 hover:-translate-y-0.5 sm:mt-9"
+            className="group inline-flex items-center gap-3 rounded-full bg-tnk-yellow py-2 pl-7 pr-2 font-display text-sm font-semibold text-tnk-black shadow-[0_12px_34px_-10px_rgba(0,0,0,0.55)] transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Book a Strategy Call
+            Work With Us
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-tnk-black text-tnk-yellow transition-transform duration-300 group-hover:rotate-45">
               <svg
                 viewBox="0 0 24 24"
@@ -64,29 +61,13 @@ export function Hero() {
               </svg>
             </span>
           </a>
-        </div>
-      </div>
-
-      {/* Feature cards — inspo-style row resting on the base of the hero */}
-      <div className="absolute inset-x-0 bottom-0 z-20 px-6 pb-5 lg:px-16 lg:pb-8">
-        <div className="mx-auto grid max-w-3xl grid-cols-3 gap-2.5 sm:max-w-4xl sm:gap-4">
-          {cards.map((c, i) => (
-            <div
-              key={c.label}
-              className={`rounded-2xl px-3 py-2.5 sm:px-4 sm:py-3 ${
-                i === 0
-                  ? "bg-tnk-paper shadow-[0_18px_45px_-20px_rgba(0,0,0,0.5)]"
-                  : "border border-white/40 bg-tnk-paper/70 backdrop-blur-md"
-              }`}
-            >
-              <p className="font-display text-[13px] font-semibold tracking-tight text-tnk-ink sm:text-sm">
-                {c.label}
-              </p>
-              <p className="mt-0.5 hidden text-[11px] font-light leading-snug text-tnk-mute sm:block">
-                {c.sub}
-              </p>
-            </div>
-          ))}
+          <a
+            href="#work"
+            className="group inline-flex items-center gap-2 font-display text-sm font-semibold text-white transition-colors hover:text-tnk-yellow"
+          >
+            Explore Our Work
+            <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+          </a>
         </div>
       </div>
     </section>

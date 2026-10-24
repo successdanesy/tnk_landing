@@ -3,36 +3,28 @@ import { Reveal } from "../components/Reveal";
 
 const faqs = [
   {
-    q: "Do I need to be on camera?",
-    a: "No. Many of the founders we work with rarely film. Between digital twin production and cinematic editing, a consistent presence doesn't require constant filming, though we can incorporate real footage whenever you want to.",
+    q: "What services does TNK Labs offer?",
+    a: "We specialize in AI-powered video ad creation and paid advertising for businesses.",
   },
   {
-    q: "How does the digital twin work?",
-    a: "We build a hyper-realistic AI representation of you that can deliver content in your voice and style. It's one tool inside the wider content system, not a replacement for your judgment or expertise.",
+    q: "Can I hire you just to create AI ads?",
+    a: "Yes. You can hire us to create AI-powered video ads without purchasing paid advertising management.",
   },
   {
-    q: "What if I don't know what to post?",
-    a: "That's the strategy phase. We work with you to define content pillars, positioning and a voice before a single piece of content is produced.",
+    q: "Can you create the ads and run the campaigns too?",
+    a: "Yes. We can handle both the creative production and paid advertising, giving your business a more integrated advertising solution.",
   },
   {
-    q: "Can you manage the content after it's created?",
-    a: "Yes. Distribution, scheduling and publishing can be handled as part of the system, so the content doesn't just sit finished. It goes live.",
+    q: "Which platforms do you run ads on?",
+    a: "We can recommend suitable advertising platforms based on your business objectives, target audience, and campaign requirements.",
   },
   {
-    q: "Which platforms can you create content for?",
-    a: "Primarily LinkedIn and X, along with founder websites and supporting digital presence. Platform focus is confirmed during the strategy call based on where your audience actually is.",
+    q: "Do you work with businesses outside Nigeria?",
+    a: "Yes. We welcome inquiries from businesses in Nigeria and international markets.",
   },
   {
-    q: "Do you work with founders outside Africa?",
-    a: "Yes. Tnklabs works with founders globally. Distribution and production are built to support international audiences where relevant.",
-  },
-  {
-    q: "How does the process begin?",
-    a: "It starts with a strategy call. From there, we outline the right approach for your goals, audience and timeline.",
-  },
-  {
-    q: "What happens during the strategy call?",
-    a: "We look at your current presence, your goals, and whether Tnklabs is the right fit. No pressure, no generic pitch.",
+    q: "How do we get started?",
+    a: "Contact us to discuss your business, advertising goals, budget, and the services you need. We'll help you identify the right approach.",
   },
 ];
 
@@ -45,12 +37,12 @@ export function FAQ() {
         <div className="text-center">
           <Reveal>
             <span className="inline-block rounded-full bg-tnk-yellow px-4 py-1.5 font-display text-xs font-semibold tracking-tight text-tnk-black">
-              Questions
+              FAQs
             </span>
           </Reveal>
           <Reveal delay={0.15} className="mt-6">
             <h2 className="text-balance font-display text-3xl font-semibold leading-tight tracking-tight text-tnk-ink sm:text-4xl lg:text-5xl">
-              Before you book the call.
+              Questions before getting started.
             </h2>
           </Reveal>
         </div>

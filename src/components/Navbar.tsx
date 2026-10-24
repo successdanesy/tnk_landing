@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { label: "Who we are", href: "#about" },
-  { label: "What we build", href: "#system" },
-  { label: "Results", href: "#results" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Who We Are", href: "#about" },
+  { label: "Our Services", href: "#services" },
+  { label: "Our Work", href: "#work" },
+  { label: "FAQs", href: "#faq" },
 ];
 
 export function Navbar() {
@@ -56,7 +56,7 @@ export function Navbar() {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-tnk-yellow p-[5px]">
             <img
               src="/photos/logo.png"
-              alt="Tnklabs logo"
+              alt="TNK Labs logo"
               className="h-full w-full object-contain"
             />
           </span>
@@ -65,7 +65,7 @@ export function Navbar() {
               solid ? "text-tnk-ink" : "text-white"
             }`}
           >
-            Tnklabs
+            TNK Labs
           </span>
         </a>
 
@@ -104,7 +104,7 @@ export function Navbar() {
             href="https://calendly.com/hellotnklabs/30min"
             className="inline-flex rounded-full bg-tnk-yellow px-4 py-2 font-display text-xs font-semibold text-tnk-black transition-transform hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-sm"
           >
-            Book a Call
+            Work With Us
           </a>
 
           {/* Mobile toggle — middle bar shorter, like the inspo */}
@@ -151,7 +151,7 @@ export function Navbar() {
               href="https://calendly.com/hellotnklabs/30min"
               className="mt-2 inline-flex w-fit rounded-full bg-tnk-yellow px-5 py-2.5 font-display text-sm font-semibold text-tnk-black"
             >
-              Book a Call
+              Work With Us
             </a>
           </nav>
         </div>
